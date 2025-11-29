@@ -6,3 +6,7 @@ def landing(req):
 
 def register(req):
     return render(req, 'register.html')
+
+def registerData(req):
+    print(req.method)
+    print(req.POST)

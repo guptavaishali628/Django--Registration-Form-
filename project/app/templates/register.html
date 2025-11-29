@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% block titile %}
+{% block title %}
     <title>Register</title>
 {% endblock title %}
 
@@ -8,5 +8,25 @@
 {% endblock css %}
 
 {% block content %}
-    This is registration page..
+    <center>
+    <h3>Registration Form</h3>
+    <form action="{% url 'registerData' %}" method="post">
+        <!--------for data security on url------------------>
+        {% csrf_token %}  
+    <!-----'name' ko as a key treat krte hai yha------>
+    Name: <input type="text" name="name">
+    <br>
+    <br> 
+    Email: <input type="email" name="email">
+    <br>
+    <br> 
+    Contact: <input type="number" name="contact">
+    <br>
+    <br> 
+    Details: <textarea name="details"></textarea>
+    <br>
+    <br>
+    <input type="submit" value="register">
+    </form>
+    </center>
 {% endblock content %}
