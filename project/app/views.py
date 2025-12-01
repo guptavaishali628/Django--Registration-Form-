@@ -10,3 +10,12 @@ def register(req):
 def registerData(req):
     print(req.method)
     print(req.POST)
+    print(req.GET)
+    print(req.FILES)
+    # printing data from dictionary
+    n=req.POST.get('name')  
+    e=req.POST.get('email')
+    c=req.POST.get('contact')
+    d=req.POST.get('details')
+    image=req.FILES.get('image')
+    print(n,e,c,d,image)

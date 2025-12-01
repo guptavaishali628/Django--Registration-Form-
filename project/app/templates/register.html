@@ -10,7 +10,7 @@
 {% block content %}
     <center>
     <h3>Registration Form</h3>
-    <form action="{% url 'registerData' %}" method="post">
+    <form action="{% url 'registerData' %}" method="post" enctype="multipart/form-data">
         <!--------for data security on url------------------>
         {% csrf_token %}  
     <!-----'name' ko as a key treat krte hai yha------>
@@ -26,6 +26,8 @@
     Details: <textarea name="details"></textarea>
     <br>
     <br>
+    <!-- enctype="multipart/form-data" (used to upload binary data) -->  
+    Image : <input type="file" name="image">
     <input type="submit" value="register">
     </form>
     </center>
