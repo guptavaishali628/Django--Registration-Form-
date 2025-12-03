@@ -24,5 +24,6 @@ urlpatterns = [
     # path('',views.landing, name='landing')
     path('',landing, name='landing'),
     path('register',register, name='register'),
-    path('registerData',registerData, name='registerData')
+    path('registerData',registerData, name='registerData'),
+    path('stu_data/',stu_data,name='stu_data')
 ]

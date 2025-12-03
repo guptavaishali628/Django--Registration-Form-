@@ -13,10 +13,10 @@ class Student(models.Model):
     Image=models.ImageField(upload_to='image/')
     
     # this method used for string type data print on the html page data.html
-    # def __str__(self):
-    #     return self.Name +" "+ self.Email
+    def __str__(self):
+        return self.Name +" "+ self.Email
     
     # this method used for int type data print on the html page data.html by doing typecasting
-    def __str__(self):
-        return str(self.Contact)
+    # def __str__(self):
+    #     return str(self.Contact)
     
